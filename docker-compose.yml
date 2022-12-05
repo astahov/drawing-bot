@@ -1,0 +1,14 @@
+version: "3"
+services:
+  drawing-bot:
+    hostname: drawing-bot
+    container_name: drawing-bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - FOO=bar
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www

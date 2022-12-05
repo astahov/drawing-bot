@@ -1,0 +1,17 @@
+{
+    "name": "astahov/drawing-bot",
+    "autoload": {
+        "psr-4": {
+            "Astahov\\DrawingBot\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ilja Astahovs",
+            "email": "ilja.astahovs@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}
