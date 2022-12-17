@@ -21,6 +21,8 @@ $diff = ImageComparator::getDiff(
     SHIFT_Y
 );
 
+shuffle($diff); // shuffle pixels to walk around the request frequency limit imposed by the server
+
 $drawer->drawPixels($diff);
 
 echo "Done.\n";
