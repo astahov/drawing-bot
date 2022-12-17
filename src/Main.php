@@ -12,8 +12,15 @@ const SHIFT_Y = 130;
 $drawer = new PixelDrawer();
 
 $image = ImageReader::readImage(Configuration::getPathToPicture(Configuration::PNG__GUYBRUSH), true);
-shuffle($image['pixels']);
 
-$drawer->drawPixels($image['pixels']);
+$diff = ImageComparator::getDiff(
+    $image['pixels'],
+    (new CanvasClient())->getPixels(),
+    Configuration::TRANSPARENT_COLOR,
+    SHIFT_X,
+    SHIFT_Y
+);
+
+$drawer->drawPixels($diff);
 
 echo "Done.\n";
