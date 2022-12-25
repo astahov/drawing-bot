@@ -53,7 +53,7 @@ class ImageReader
         }
 
         if (!is_numeric($s)) {
-            return $s;
+            return '0' . $s;
         }
 
         if ((int)$s < 10) {

@@ -55,5 +55,6 @@ class ImageReaderTest extends TestCase
         self::assertEquals('09', ImageReader::prefixWithZeroIfNeeded('9'));
         self::assertEquals('ff', ImageReader::prefixWithZeroIfNeeded('ff'));
         self::assertEquals('0f', ImageReader::prefixWithZeroIfNeeded('0f'));
+        self::assertEquals('0f', ImageReader::prefixWithZeroIfNeeded('f'));
     }
 }
